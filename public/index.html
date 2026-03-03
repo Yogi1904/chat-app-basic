@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
     <title>Chat App</title>
 </head>
-<body>
-    <h1>Chat App</h1>
-    <div id = "messages">
+<body class="px-2 d-flex flex-column vh-100">
+    <div class="h1 text-left py-3 m-0">Chat App</div>
+
+    <div id = "messages" class="flex-grow-1 overflow-auto">
 
     </div>
 
+    <div class="pb-3 px-2 input-group bg-white">
+        <input type="text" name="message" id="message" placeholder="type your message here" class="form-control">
+        <button name = 'sendBtn' id="sendBtn" class="input-group-text bg-danger text-white">Send</button>
+    </div>
+    
 
-
-    <input type="text" name="message" id="message" placeholder="type your message here">
-    <button name = 'sendBtn' id="sendBtn">Click Here</button>
     <script src = "/socket.io/socket.io.js"></script>    
     <script src="script.js"></script>
 </body>
